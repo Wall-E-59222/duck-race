@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://www.online-stopwatch.com/duck-race/?characters=2 -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Duck Race - Duck Games</title>
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
+    <meta
+      name="keywords"
+      content="Duck Race,Online Duck Race,Duck Games,Online Duck Games,Duck,Rubber Duck Race,Rubber Duck,Online Rubber Duck Race,Duck Race Timer,Rubber Duck Race Timer"
+    />
+    <meta
+      name="description"
+      content="Pick a winner with our Online Duck Race! This Duck Game is sure to be a big hit in classrooms! It&#39;s Quackers!"
+    />
+    <meta name="author" content="Duck Race" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="/files/images/favicon.ico" />
+    <script>
+      (function () {
+        var f = {};
+        var g = /iPhone/i,
+          i = /iPod/i,
+          j = /iPad/i,
+          k = /biOS-universal(?:.+)Macb/i,
+          h = /bAndroid(?:.+)Mobileb/i,
+          m = /Android/i,
+          c = /(?:SD4930UR|bSilk(?:.+)Mobileb)/i,
+          d = /Silk/i,
+          b = /Windows Phone/i,
+          n = /bWindows(?:.+)ARMb/i,
+          p = /BlackBerry/i,
+          q = /BB10/i,
+          s = /Opera Mini/i,
+          t = /b(CriOS|Chrome)(?:.+)Mobile/i,
+          u = /Mobile(?:.+)Firefoxb/i,
+          v = function (l) {
+            return (
+              void 0 !== l &&
+              "MacIntel" === l.platform &&
+              "number" == typeof l.maxTouchPoints &&
+              l.maxTouchPoints > 1 &&
+              "undefined" == typeof MSStream
+            );
+          };
+        function w(l) {
+          return function ($) {
+            return $.test(l);
+          };
+        }
+        function x(l) {
+          var $ = { userAgent: "", platform: "", maxTouchPoints: 0 };
+          l || "undefined" == typeof navigator
+            ? "string" == typeof l
+              ? ($.userAgent = l)
+              : l &&
+                l.userAgent &&
+                ($ = {
+                  userAgent: l.userAgent,
+                  platform: l.platform,
+                  maxTouchPoints: l.maxTouchPoints || 0,
+                })
+            : ($ = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                maxTouchPoints: navigator.maxTouchPoints || 0,
+              });
+          var a = $.userAgent,
+            e = a.split("[FBAN");
+          void 0 !== e[1] && (a = e[0]),
+            void 0 !== (e = a.split("Twitter"))[1] && (a = e[0]);
+          var r = w(a),
+            o = {
+              apple: {
+                phone: r(g) && !r(b),
+                ipod: r(i),
+                tablet: !r(g) && (r(j) || v($)) && !r(b),
+                universal: r(k),
+                device: (r(g) || r(i) || r(j) || r(k) || v($)) && !r(b),
+              },
+              amazon: {
+                phone: r(c),
+                tablet: !r(c) && r(d),
+                device: r(c) || r(d),
+              },
+              android: {
+                phone: (!r(b) && r(c)) || (!r(b) && r(h)),
+                tablet: !r(b) && !r(c) && !r(h) && (r(d) || r(m)),
+                device:
+                  (!r(b) && (r(c) || r(d) || r(h) || r(m))) || r(/bokhttpb/i),
+              },
+              windows: { phone: r(b), tablet: r(n), device: r(b) || r(n) },
+              other: {
+                blackberry: r(p),
+                blackberry10: r(q),
+                opera: r(s),
+                firefox: r(u),
+                chrome: r(t),
+                device: r(p) || r(q) || r(s) || r(u) || r(t),
+              },
+              any: !1,
+              phone: !1,
+              tablet: !1,
+            };
+          return (
+            (o.any =
+              o.apple.device ||
+              o.android.device ||
+              o.windows.device ||
+              o.other.device),
+            (o.phone = o.apple.phone || o.android.phone || o.windows.phone),
+            (o.tablet = o.apple.tablet || o.android.tablet || o.windows.tablet),
+            o
+          );
+        }
+        f = x();
+        if (typeof exports === "object" && typeof module !== "undefined") {
+          module.exports = f;
+        } else if (typeof define === "function" && define.amd) {
+          define(function () {
+            return f;
+          });
+        } else {
+          this["isMobile"] = f;
+        }
+      })();
+      if (isMobile.any) {
+        var fuseMap = {
+          22996997582: "22996997597",
+          22996997585: "22996997600",
+          22996349098: "",
+          22996997591: "",
+          22996997588: "22996997603",
+        };
+        var observer = new MutationObserver(function (mutationsList) {
+          for (var i = 0; i < mutationsList.length; i++) {
+            var mutation = mutationsList[i];
+            if (
+              mutation.type === "childList" &&
+              mutation.addedNodes.length > 0
+            ) {
+              for (var j = 0; j < mutation.addedNodes.length; j++) {
+                var node = mutation.addedNodes[j];
+                if (node.nodeType === 1 && node.getAttribute("data-fuse")) {
+                  var originalValue = node.getAttribute("data-fuse");
+                  if (fuseMap.hasOwnProperty(originalValue)) {
+                    var replacementValue = fuseMap[originalValue];
+                    if (replacementValue === "") {
+                      node.parentNode.parentNode.removeChild(node.parentNode);
+                    } else {
+                      node.setAttribute("data-fuse", replacementValue);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+      }
+    </script>
+    <script async="" src="./files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-MPJ3NLQYPR");
+    </script>
+    <link rel="stylesheet" href="./files/lightslider.css" />
+    <link
+      href="./files/online-stopwatch.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./files/photo.css" />
+    <script>
+      var OSpro = true;
+      var appType = "race";
+    </script>
+    <script data-cfasync="false">
+      var OSapp = {
+        vector: "./files/main.html",
+        bitmap: "",
+        flash: "duck-race.swf",
+        width: "942px",
+        height: "530px",
+        fullscreen: "true",
+        appType: "race",
+      };
+    </script>
+    <script data-cfasync="false" src="./files/combined.js"></script>
+    <link rel="stylesheet" href="./files/photo.css" />
+    <style>
+      .topTitle {
+        background-color: #393939;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 48px;
+        display: block;
+        color: #fff;
+        width: 100%;
+        height: 40px;
+        background-image: url(/iamges/pro-dragUp2.svg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        clear: both;
+        z-index: 888888888;
+      }
+      #titletext {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      #dragbar {
+        background-color: #000;
+        height: 10px;
+        width: 100%;
+        cursor: row-resize;
+        background-image: url(/iamges/pro-dragDown2.svg);
+        background-position: right top;
+        background-repeat: no-repeat;
+        clear: both;
+        display: block;
+        z-index: 99999999999;
+      }
+
+      .dragbarSick {
+        position: absolute;
+        bottom: 0px;
+      }
+      #dragbar:hover {
+        background-color: #900;
+      }
+
+      #ghostbar {
+        height: 5px;
+        width: 100%;
+        background-color: #900;
+        opacity: 0.5;
+        position: absolute;
+        cursor: row-resize;
+        z-index: 999999999;
+      }
+
+      #totalCover {
+        background-color: #fff;
+        opacity: 0.01;
+        filter: alpha(opacity=001);
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 999999;
+        left: 0px;
+        top: 0px;
+      }
+      .titleAdded {
+        background-color: #393939;
+      }
+      .titleAdded a {
+        color: #999;
+      }
+      .littleExplain {
+        clear: both;
+        width: 240px;
+        position: absolute;
+        margin-left: -130px;
+        background-image: url(/files/images/online-stopwatch-sprites.png);
+        background-position: 0 -265px;
+        background-repeat: repeat-y;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: #aeb801;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 11px;
+        font-style: normal;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        margin-top: 2px;
+        text-align: center;
+        z-index: 999;
+        right: 10px;
+      }
+
+      .box .boxButtonLeft {
+        display: block;
+        font-size: 18px;
+        min-height: 30px;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 28px;
+        color: #ffffff;
+        background-color: #4fa52e;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        margin-right: 10px;
+      }
+      .box .boxButtonLeft a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .box .boxButtonLeft:hover {
+        background-color: #63c93e;
+      }
+      .box .boxButtonLeft .pad {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .box .boxButtonLeft span {
+        font-size: 14px;
+      }
+      @media (max-width: 700px) {
+        .boxButtonLeft {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .boxButton {
+          width: 100%;
+          float: left;
+        }
+      }
+
+      #timerCreate {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullscreenhead ad">
+      <div class="backlink">
+        <a title="Back to My Page!"  href="#"
+          >&lt; Back to My Page!</a
+        >
+        <span id="myPage">
+          ||
+          <a
+            id="addToMyPage"
+             href="#"
+            >Add To My Page!</a
+          ></span
+        >
+      </div>
+      <div class="fullscreenlink">
+        <a
+          rel="nofollow"
+          id="osFullscreenLaunch"
+          href="https://duck-race.netlify.app/?characters=2#"
+          >Super Fullscreen!</a
+        >
+      </div>
+      <div class="fullscreenlink">
+        <a
+          rel="nofollow"
+          id="hidePremiumBar"
+          href="https://duck-race.netlify.app/?characters=2#"
+          >Hide Premium Bar</a
+        >&nbsp;||&nbsp;
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="Online-Stopwatch">
+      <iframe
+        title="Online-Stopwatch"
+        id="fullframe"
+        name="fullframe"
+        src="./files/saved_resource.html"
+        allow="autoplay"
+        width="100%"
+        height="668.9702760084926px"
+        scrolling="no"
+        frameborder="0"
+        style="width: 100%; height: 668.97px"
+      ></iframe>
+    </div>
+    <div class="boxes ad">
+      <div id="premiumBarAll" class="box blue grunge">
+        <div class="boxbg settings">
+          <div class="inner">
+            <div class="holder">
+              <div class="title dropbox">
+                <div class="titleInner">
+                  <div class="icon"></div>
+                  <h3>Premium Settings:</h3>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="content hide">
+                <div id="showListOption" class="item splitSmall optTick">
+                  <div id="saveTimerList" class="itemLabel">Saved Lists:</div>
+                  <div class="itemContent">
+                    <span class="whiteInput fullWidthInput dropArrow">
+                      <select name="os-opt-list" id="os-opt-list">
+                        <option value="d">Load a saved list...</option>
+                        <option
+                          value="?6135abd94bd1a8=undefined&amp;characterStyle=0#&amp;characters=197&amp;countdown=00:00:10&amp;"
+                          data-title=""
+                        >
+                          10
+                        </option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="item splitSmall optTitle">
+                  <div class="itemLabel">Add a Title:</div>
+                  <div class="itemContent">
+                    <span class="whiteInput fullWidthInput">
+                      <input
+                        id="os-opt-title"
+                        name="os-opt-title"
+                        type="text"
+                        value=""
+                      />
+                    </span>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div id="timerCreate">
+                  <div class="item splitSmall optSound">
+                    <div class="itemLabel">Sound:</div>
+                    <div class="itemContent">
+                      <span class="whiteInput fullWidthInput dropArrow">
+                        <select name="os-opt-sound" id="os-opt-sound">
+                          <option value="d" selected="">Timer Default</option>
+
+                          <option value="1">Original Bell</option>
+                          <option value="2">Air Raid Siren</option>
+                          <option value="3">Applause</option>
+                          <option value="4">Festive Bells</option>
+                          <option value="5">Rocket Launch</option>
+                          <option value="6">Explosion</option>
+                          <option value="7">Cop Car</option>
+                          <option value="8">High Pitch</option>
+                          <option value="9">Laughing</option>
+                          <option value="10">Ting Ting Bell</option>
+                          <option value="11">Submarine</option>
+                          <option value="12">Sonar</option>
+                          <option value="13">Race Bugle</option>
+                          <option value="14">Key Chimes</option>
+                          <option value="15">Digital Alarm</option>
+                          <option value="16">Siren</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="item splitSmall optLoop">
+                    <div class="itemLabel">Sound Loop:</div>
+                    <div class="itemContent">
+                      <span class="whiteInput fullWidthInput dropArrow">
+                        <select name="os-opt-loop" id="os-opt-loop">
+                          <option value="d">Timer Default</option>
+                          <option value="1">1 Loop</option>
+                          <option value="2">2 Loops</option>
+                          <option value="3">3 Loops</option>
+                          <option value="5">5 Loops</option>
+                          <option value="999">Loop Until Stopped</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="item splitSmall optStart">
+                    <div class="itemLabel">Timer Display:</div>
+                    <div class="itemContent">
+                      <span class="whiteInput dropArrow">
+                        <select name="os-opt-display" id="os-opt-display">
+                          <option value="d" selected="">
+                            HH:MM:SS:MMM (Default)
+                          </option>
+                          <option value="hhmmss">HH:MM:SS</option>
+                          <option value="hhmm">HH:MM</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="item splitSmall optStart">
+                    <div class="itemLabel">Start Time:</div>
+                    <div class="itemContent">
+                      <span class="whiteInput sizedForDigits">
+                        <select name="os-opt-hh" id="os-opt-hh">
+                          <option value="00" selected="">HH</option>
+                          <option>00</option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                          <option>32</option>
+                          <option>33</option>
+                          <option>34</option>
+                          <option>35</option>
+                          <option>36</option>
+                          <option>37</option>
+                          <option>38</option>
+                          <option>39</option>
+                          <option>40</option>
+                          <option>41</option>
+                          <option>42</option>
+                          <option>43</option>
+                          <option>44</option>
+                          <option>45</option>
+                          <option>46</option>
+                          <option>47</option>
+                          <option>48</option>
+                          <option>49</option>
+                          <option>50</option>
+                          <option>51</option>
+                          <option>52</option>
+                          <option>53</option>
+                          <option>54</option>
+                          <option>55</option>
+                          <option>56</option>
+                          <option>57</option>
+                          <option>58</option>
+                          <option>59</option>
+                        </select> </span
+                      >:
+                      <span class="whiteInput sizedForDigits">
+                        <select name="os-opt-mm" id="os-opt-mm">
+                          <option value="00" selected="">MM</option>
+                          <option>00</option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                          <option>32</option>
+                          <option>33</option>
+                          <option>34</option>
+                          <option>35</option>
+                          <option>36</option>
+                          <option>37</option>
+                          <option>38</option>
+                          <option>39</option>
+                          <option>40</option>
+                          <option>41</option>
+                          <option>42</option>
+                          <option>43</option>
+                          <option>44</option>
+                          <option>45</option>
+                          <option>46</option>
+                          <option>47</option>
+                          <option>48</option>
+                          <option>49</option>
+                          <option>50</option>
+                          <option>51</option>
+                          <option>52</option>
+                          <option>53</option>
+                          <option>54</option>
+                          <option>55</option>
+                          <option>56</option>
+                          <option>57</option>
+                          <option>58</option>
+                          <option>59</option>
+                        </select> </span
+                      >:
+                      <span class="whiteInput sizedForDigits">
+                        <select name="os-opt-ss" id="os-opt-ss">
+                          <option value="00" selected="">SS</option>
+                          <option>00</option>
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                          <option>32</option>
+                          <option>33</option>
+                          <option>34</option>
+                          <option>35</option>
+                          <option>36</option>
+                          <option>37</option>
+                          <option>38</option>
+                          <option>39</option>
+                          <option>40</option>
+                          <option>41</option>
+                          <option>42</option>
+                          <option>43</option>
+                          <option>44</option>
+                          <option>45</option>
+                          <option>46</option>
+                          <option>47</option>
+                          <option>48</option>
+                          <option>49</option>
+                          <option>50</option>
+                          <option>51</option>
+                          <option>52</option>
+                          <option>53</option>
+                          <option>54</option>
+                          <option>55</option>
+                          <option>56</option>
+                          <option>57</option>
+                          <option>58</option>
+                          <option>59</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="item stayFixed optAuto">
+                    <div class="itemLabel">Auto Start:&nbsp;</div>
+                    <div class="itemContent">
+                      <input
+                        name="os-opt-autostart"
+                        id="os-opt-autostart"
+                        class="checkBox"
+                        type="checkbox"
+                      />
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                  <div
+                    class="boxButtonLeft"
+                    style="background-color: rgb(153, 0, 0)"
+                  >
+                    <a
+                      id="os-opt-save"
+                      rel="nofollow"
+                      href="https://duck-race.netlify.app/?characters=2#"
+                      ><div id="os-opt-save-text" class="pad">
+                        Delete Timer!
+                      </div></a
+                    >
+                  </div>
+                  <div class="boxButton">
+                    <a
+                      id="os-opt-use"
+                      rel="nofollow"
+                      href="https://duck-race.netlify.app/?characters=2#"
+                      ><div id="os-opt-use-text" class="pad">
+                        Update Saved Timer!
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <script>
+      var addingNew = true;
+
+      function updateTimer(doing) {
+        var optset = buildTimerLink();
+
+        var pl = "";
+        if (doing == 2) {
+          pl = $("#os-opt-list").val();
+        }
+
+        if (optset.query != "") {
+          $.post("/js/userDB.php", {
+            ant: optset.query,
+            antt: optset.title,
+            anou: doing,
+            anto: pl,
+          }).done(function (data) {
+            data = JSON.parse(data);
+            window.location.href = data.url;
+          });
+        }
+      }
+
+      window.addEventListener("message", function (e) {
+        if (e.origin.indexOf("online-stopwatch.com") === -1) return;
+        if (e.data.id === "replaceUrl") {
+          history.replaceState(null, null, e.data.url);
+
+          var rcode = getParameterByName("r", e.data.url);
+
+          if (rcode) {
+            listDrop();
+          }
+        }
+      });
+
+      function listDrop() {
+        $.post("/js/listDrop.php", { w: "race" }).done(function (data) {
+          console.log(data);
+          $("#os-opt-list")
+            .empty()
+            .append('<option value="d">Load a saved list...</option>' + data);
+          changeDropDownSelected();
+        });
+      }
+
+      if (typeof getParameterByName === "undefined") {
+        function getParameterByName(name, url) {
+          if (!url) {
+            url = window.location.href;
+          }
+
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return "";
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+      }
+
+      $(document).ready(function () {
+        $(document).on("click", "#hidePremiumBar", function (event) {
+          $("#premiumBarAll").toggle();
+          osScaleApp();
+
+          var word = "Show";
+          if ($("#premiumBarAll").is(":visible")) {
+            word = "Hide";
+          }
+
+          $("#hidePremiumBar").text(word + " Premium Bar");
+        });
+
+        $(document).on("click", "#bringBackPremiumBar", function (event) {
+          $("#premiumBarAll").show();
+          osScaleApp();
+          $("#bbpbargo").remove();
+        });
+
+        $(document).on("click", "#addToMyPage", function (event) {
+          event.preventDefault();
+
+          if ($("#addToMyPage").html() == "Added! :-)") {
+            return false;
+          }
+
+          $.post("/js/userDB.php", {
+            i: "duck-race.png",
+            p: "duck-race",
+            t: "race",
+          }).done(function (data) {
+            $("#addToMyPage").fadeOut(300, function () {
+              $("#addToMyPage").html("Added! :-)");
+              $("#addToMyPage").fadeIn(300, function () {
+                $("#myPage").delay(2000).fadeOut();
+              });
+            });
+          });
+        });
+
+        $("#os-opt-save").click(function (e) {
+          e.preventDefault();
+          if (addingNew == false) {
+            updateTimer(3); // Deleting
+          } else {
+            updateTimer(1);
+          }
+        });
+
+        $("#os-opt-use").click(function (e) {
+          e.preventDefault();
+
+          if (addingNew == false) {
+            // Updating a timer
+            updateTimer(2);
+          } else {
+            // Just loading - no saving!
+            var optset = buildTimerLink();
+            if (optset.query != "") {
+              window.location.href = optset.query;
+            }
+          }
+        });
+
+        if (appType == "list") {
+          $(".timerCreate").remove();
+
+          $("#saveTimerList").html("Saved Lists:");
+        }
+
+        // Settings box
+        if (osURLvar) {
+          if (osURLvar.title) {
+            $("#os-opt-title").val(decodeURIComponent(osURLvar.title));
+          }
+          // Loading a pre-saved timer
+          changeDropDownSelected();
+
+          $("#os-opt-save-text").text("Delete Timer!");
+
+          $(".boxButtonLeft").css("background-color", "#900");
+
+          $("#os-opt-use-text").text("Update Saved Timer!");
+
+          addingNew = false;
+        }
+
+        $("#os-opt-list").change(function () {
+          if ($("#os-opt-list").val() == "d") {
+            window.location.href = window.location.href.split("?")[0];
+          } else {
+            window.location.href = $(this).val();
+          }
+        });
+      });
+
+      function changeDropDownSelected() {
+        var code = getParameterByName("r", window.location.href);
+
+        if (!code) {
+          $("#os-opt-list option:nth-child(1)").prop("selected", true);
+
+          $("#os-opt-title").val("");
+        } else {
+          var opt = $("#os-opt-list option[value*='" + code + "']").val();
+          $("#os-opt-list").val(opt);
+
+          $("#os-opt-title").val(
+            $("#os-opt-list option[value*='" + code + "']").data("title")
+          );
+        }
+      }
+
+      function grabTitle(title) {
+        $("#os-opt-title").val(title);
+      }
+
+      var timeOutTitleEdit;
+      $(document).on(
+        "propertychange change keyup input paste",
+        "#os-opt-title",
+        function (e) {
+          var code = getParameterByName("r", window.location.href);
+
+          if (code) {
+            clearTimeout(timeOutTitleEdit);
+            timeOutTitleEdit = setTimeout(updateTimerTitle, 2000);
+          }
+        }
+      );
+
+      function updateTimerTitle() {
+        var code = getParameterByName("r", window.location.href);
+
+        if (code) {
+          $.post("/js/savePageTitleChange.php", {
+            r: code,
+            t: $("#os-opt-title").val(),
+          }).done(function (data) {
+            console.log(data);
+
+            /*
+				$('#addToMyPage').fadeOut(300,function() {
+					$('#addToMyPage').html('Added! :-)');
+					  $('#addToMyPage').fadeIn(300, function () {
+						$('#myPage').delay(2000).fadeOut();
+					  });	 
+				});	
+				*/
+          });
+        }
+      }
+
+      //================================================================================== Photo Page Part
+      var resizingThis = "iframe";
+
+      function resizeFrame() {
+        if (resizingThis == "iframe") {
+          var pct = 95;
+          var winWidth = $(window).width();
+
+          var nwidth = (winWidth / 100) * pct;
+          $(".featherlight-inner").css("width", nwidth + "px");
+          setTimeout(function () {
+            var nheight = $(".featherlight-inner")
+              .contents()
+              .find("#fullHeight")
+              .outerHeight(true);
+            $(".featherlight-inner")
+              .css("width", nwidth + "px")
+              .css("height", nheight + "px");
+          }, 50);
+        }
+
+        if (resizingThis == "add") {
+          var nwidth = $(".featherlight-inner")
+            .contents()
+            .find("#addp")
+            .outerWidth(true);
+          var nheight;
+          $(".featherlight-inner").css("width", nwidth + "px");
+          setTimeout(function () {
+            nheight = $(".featherlight-inner")
+              .contents()
+              .find("#addp")
+              .outerHeight(true);
+            $(".featherlight-inner")
+              .css("width", nwidth + "px")
+              .css("height", nheight + "px");
+          }, 50);
+        }
+      }
+
+      function cogCall() {
+        var nwidth = ($(window).width() / 100) * 80;
+
+        if ($.featherlight.current() == null) {
+          $.featherlight({
+            iframe: "/js/photo/index.php?c=default",
+            iframeWidth: nwidth,
+            closeOnEsc: false,
+            closeOnClick: false,
+            closeTrigger: "closeMe",
+            loading: "Please Wait...",
+            closeIcon: "",
+            onResize: function (event) {
+              resizeFrame();
+            },
+          });
+        }
+      }
+      function resizeWhat(t) {
+        resizingThis = t;
+        resizeFrame();
+      }
+      //=====================================================================================
+      function getURL() {
+        return "https://duck-race.netlify.app/duck-race/";
+      }
+      function getGraphic() {
+        return "duck-race";
+      }
+
+      // console.log("");
+    </script>
+
+    <canvas
+      style="
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        pointer-events: none;
+      "
+      width="1189"
+      height="919"
+    ></canvas>
+  </body>
+</html>

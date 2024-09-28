@@ -1,0 +1,154 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100">
+<defs>
+<linearGradient id="Gradient_1" gradientUnits="userSpaceOnUse" x1="-0.025000000000005684" y1="64.25" x2="98.025" y2="64.25" spreadMethod="pad">
+<stop  offset="0%" stop-color="#FF0000"/>
+
+<stop  offset="100%" stop-color="#FE8181"/>
+</linearGradient>
+
+<radialGradient id="Gradient_2" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="114" fx="0" fy="0" gradientTransform="matrix( 0, 1, -0.3452850877192983, 0, 0,43) " spreadMethod="pad">
+<stop  offset="0%" stop-color="#FFFFFF" stop-opacity="0.6431372549019608"/>
+
+<stop  offset="100%" stop-color="#FFFFFF" stop-opacity="0.09803921568627451"/>
+</radialGradient>
+
+<linearGradient id="Gradient_3" gradientUnits="userSpaceOnUse" x1="-0.025000000000005684" y1="64.25" x2="98.025" y2="64.25" spreadMethod="pad">
+<stop  offset="0%" stop-color="#02FD34"/>
+
+<stop  offset="100%" stop-color="#84FB9B"/>
+</linearGradient>
+
+<radialGradient id="Gradient_4" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="114" fx="0" fy="0" gradientTransform="matrix( 0, 1, 0.3456140350877193, 0, 98.05,43) " spreadMethod="pad">
+<stop  offset="0%" stop-color="#FFFFFF" stop-opacity="0.2627450980392157"/>
+
+<stop  offset="100%" stop-color="#FFFFFF" stop-opacity="0.18823529411764706"/>
+</radialGradient>
+
+<g id="Duplicate_Items_Folder_SMALLred_1_0_Layer0_0_FILL">
+<path fill="url(#Gradient_1)" stroke="none" d="
+M 96.55 75.9
+Q 98.05 73.7 98.05 70.75 98.05 67.3 95.9 64.85 93.8 62.4 90.85 62.4
+L 74.6 62.4 82.45 8.85
+Q 82.4 5.2 80.15 2.6 77.9 0 74.75 0
+L 23.3 0
+Q 20.1 0 17.85 2.6 15.65 5.2 15.6 8.85
+L 23.45 62.4 7.15 62.4
+Q 4.2 62.4 2.1 64.85 0 67.3 0 70.75 0 73.7 1.45 75.9
+L 42.5 125.85
+Q 45.05 128.5 48.65 128.5 48.85 128.5 49.05 128.5 49.2 128.5 49.4 128.5 53 128.5 55.55 125.85
+L 55.7 125.7
+Q 55.8 125.55 55.95 125.4
+L 56.1 125.25
+Q 56.2 125.1 56.25 125.05
+L 56.35 124.95
+Q 56.55 124.65 56.8 124.35
+L 96.55 75.9 Z"/>
+</g>
+
+<g id="Duplicate_Items_Folder_SMALLarrow_red_copy_0_Layer1_0_FILL">
+<path fill="url(#Gradient_2)" stroke="none" d="
+M 34.5 0
+L 23.3 0
+Q 20.1 0 17.85 2.6 15.65 5.2 15.6 8.85
+L 23.45 62.4 7.15 62.4
+Q 4.2 62.4 2.1 64.85 0 67.3 0 70.75 0 73.7 1.45 75.9
+L 42.5 125.85 49 128.5
+Q 34.45 93.840234375 34.45 55.5 34.45 53.25 34.5 51
+L 34.5 0 Z"/>
+</g>
+
+<g id="Duplicate_Items_Folder_SMALLgreen_0_Layer0_0_FILL">
+<path fill="url(#Gradient_3)" stroke="none" d="
+M 96.55 75.9
+Q 98.05 73.7 98.05 70.75 98.05 67.3 95.9 64.85 93.8 62.4 90.85 62.4
+L 74.6 62.4 82.45 8.85
+Q 82.4 5.2 80.15 2.6 77.9 0 74.75 0
+L 23.3 0
+Q 20.1 0 17.85 2.6 15.65 5.2 15.6 8.85
+L 23.45 62.4 7.15 62.4
+Q 4.2 62.4 2.1 64.85 0 67.3 0 70.75 0 73.7 1.45 75.9
+L 42.5 125.85
+Q 45.05 128.5 48.65 128.5 48.85 128.5 49.05 128.5 49.2 128.5 49.4 128.5 53 128.5 55.55 125.85
+L 55.7 125.7
+Q 55.8 125.55 55.95 125.4
+L 56.1 125.25
+Q 56.2 125.1 56.25 125.05
+L 56.35 124.95
+Q 56.55 124.65 56.8 124.35
+L 96.55 75.9 Z"/>
+</g>
+
+<g id="Duplicate_Items_Folder_SMALLarrow_green_0_Layer1_0_FILL">
+<path fill="url(#Gradient_4)" stroke="none" d="
+M 95.95 64.85
+Q 93.85 62.4 90.9 62.4
+L 74.6 62.4 82.45 8.85
+Q 82.4 5.2 80.2 2.6 77.95 0 74.75 0
+L 63.5 0 63.5 51
+Q 63.55 53.25 63.55 55.5 63.55 93.85 49 128.5
+L 55.5 125.85 96.6 75.9
+Q 98.05 73.7 98.05 70.75 98.05 67.3 95.95 64.85 Z"/>
+</g>
+
+<path id="Duplicate_Items_Folder_SMALLarrow_red_copy_0_Layer0_0_1_STROKES" stroke="#333333" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 90.85 62.4
+L 74.6 62.4 82.45 8.85
+Q 82.4 5.2 80.15 2.6 77.9 0 74.75 0
+L 23.3 0
+Q 20.1 0 17.85 2.6 15.65 5.2 15.6 8.85
+L 23.45 62.4 7.15 62.4
+Q 4.2 62.4 2.1 64.85 0 67.3 0 70.75 0 73.7 1.45 75.9
+L 42.5 125.85
+Q 45.1 128.5 49 128.5 53 128.5 55.55 125.85
+L 96.55 75.9
+Q 98.05 73.7 98.05 70.75 98.05 67.3 95.9 64.85 93.8 62.4 90.85 62.4 Z"/>
+
+<path id="Duplicate_Items_Folder_SMALLarrow_green_0_Layer0_0_1_STROKES" stroke="#333333" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 90.85 62.4
+L 74.6 62.4 82.45 8.85
+Q 82.4 5.2 80.15 2.6 77.9 0 74.75 0
+L 23.3 0
+Q 20.1 0 17.85 2.6 15.65 5.2 15.6 8.85
+L 23.45 62.4 7.15 62.4
+Q 4.2 62.4 2.1 64.85 0 67.3 0 70.75 0 73.7 1.45 75.9
+L 42.5 125.85
+Q 45.1 128.5 49 128.5 53 128.5 55.55 125.85
+L 96.55 75.9
+Q 98.05 73.7 98.05 70.75 98.05 67.3 95.9 64.85 93.8 62.4 90.85 62.4 Z"/>
+</defs>
+
+<g transform="matrix( 0.833038330078125, 0, 0, 0.8321533203125, 21.7,17.55) ">
+<g transform="matrix( 0.3415069580078125, 0, 0, 0.3415069580078125, 35.15,9.8) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLred_1_0_Layer0_0_FILL"/>
+</g>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLarrow_red_copy_0_Layer1_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLarrow_red_copy_0_Layer0_0_1_STROKES"/>
+</g>
+</g>
+
+<g transform="matrix( -0.3415069580078125, 0, 0, -0.3415069580078125, 33.5,41.9) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLgreen_0_Layer0_0_FILL"/>
+</g>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLarrow_green_0_Layer1_0_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Duplicate_Items_Folder_SMALLarrow_green_0_Layer0_0_1_STROKES"/>
+</g>
+</g>
+</g>
+</svg>

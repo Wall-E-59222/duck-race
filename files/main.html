@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://www.online-stopwatch.com/html5/race-timers-clock-mode/duck-race-1000/?v=210224095229&c=1.6 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no"
+    />
+    <title>index</title>
+    <link href="./racetimer.css" rel="stylesheet" type="text/css" />
+    <link href="./newrace.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      #countInput {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(1rem, 5vw, 2rem);
+      }
+    </style>
+    <script src="./createjs.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./jquery.blockUI.js"></script>
+    <script src="./timerfix.js"></script>
+    <script src="./prototypes.js"></script>
+    <script src="./helpers.js"></script>
+    <script src="./language.js"></script>
+    <script src="./server.js"></script>
+    <script src="./snippets.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./cache.js"></script>
+    <script src="./sound.js"></script>
+    <script src="./settings.js"></script>
+    <script src="./keyboard.js"></script>
+    <script src="./timermenu.js"></script>
+    <script src="./listwinners.js"></script>
+    <script src="./userlogo.js"></script>
+    <script src="./main.js"></script>
+    <script src="./index.js"></script>
+    <script>
+      
+    </script>
+    <script>
+      var canvas,
+        stage,
+        exportRoot,
+        anim_container,
+        dom_overlay_container,
+        fnStartAnimation,
+        lib,
+        loader,
+        AdobeAn0,
+        AdobeAn1000;
+      var urlData = urlSettings();
+      function reCreateManifest(manifest) {
+        var i;
+
+        for (i = 0; i < manifest.length; i++) {
+          if (/.*?jquery.*?\.js/.test(manifest[i].id)) {
+            manifest.splice(i, 1);
+            break;
+          }
+        }
+
+        for (i = 0; i < manifest.length; i++) {
+          if (/.*?anwidget.*?\.js/.test(manifest[i].id)) {
+            manifest[i].src = "/files/component/anwidget.js";
+            break;
+          }
+        }
+        return manifest;
+      }
+
+      function init() {
+        $("canvas").hide();
+        canvas = document.getElementById("canvas");
+        canvas.oncontextmenu = function () {
+          return false;
+        };
+        anim_container = document.getElementById("animation_container");
+        dom_overlay_container = document.getElementById(
+          "dom_overlay_container"
+        );
+        var comp = AdobeAn.getComposition("82FF19653FF5584EBED3897B2F75DA5A");
+        lib = comp.getLibrary();
+        createjs.MotionGuidePlugin.install();
+        loader = new createjs.LoadQueue(true);
+        loader.installPlugin(createjs.Sound);
+        loader.addEventListener("fileload", function (evt) {
+          handleFileLoad(evt, comp);
+        });
+        loader.addEventListener("complete", function (evt) {
+          handleComplete(evt, comp);
+        });
+        loader.addEventListener("progress", function (evt) {
+          handleProgress(evt, comp);
+        });
+        loader.addEventListener("error", function (evt) {
+          handleError(evt, comp);
+        });
+
+        lib.properties.manifest.push({
+          id: "sounds",
+          src: "/files/sounds/sounds.json",
+        });
+        lib.properties.manifest = reCreateManifest(lib.properties.manifest);
+        lib.properties.manifest.push({ id: "cheer0", src: "/files/sounds/cheer.mp3" });
+        lib.properties.manifest.push({
+          id: "airhorn0",
+          src: "/files/sounds/airhorn.mp3",
+        });
+        lib.properties.manifest.push({ id: "duck0", src: "/files/sounds/duck0.mp3" });
+        lib.properties.manifest.push({ id: "duck1", src: "/files/sounds/duck1.mp3" });
+        lib.properties.manifest.push({ id: "duck2", src: "/files/sounds/duck2.mp3" });
+        lib.properties.manifest.push({
+          id: "premium1000",
+          src: "./component/premium1000.js",
+          crossOrigin: "Anonymous",
+        });
+        loadFinalManifestAWS(function () {
+          loader.loadManifest(lib.properties.manifest);
+        });
+      }
+      function handleError(evt, comp) {
+        if (evt.data.type === "sound") urlData.ns = null;
+        if (evt.data.type === "text") urlData.language = null;
+      }
+      function handleProgress(evt, comp) {
+        $("#loader").html(Math.round(evt.progress * 100) + "% loaded");
+      }
+      function handleFileLoad(evt, comp) {
+        var images = comp.getImages();
+        if (evt && evt.item.type === "image") {
+          images[evt.item.id] = evt.result;
+        }
+      }
+      function handleComplete(evt, comp) {
+        loader.removeAllEventListeners();
+        $("#loader").html("wait, initializing...");
+        var lib = comp.getLibrary();
+        var ss = comp.getSpriteSheet();
+        var queue = evt.target;
+        var ssMetadata = lib.ssMetadata;
+        for (i = 0; i < ssMetadata.length; i++) {
+          ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+            images: [queue.getResult(ssMetadata[i].name)],
+            frames: ssMetadata[i].frames,
+          });
+        }
+        exportRoot = new lib.index();
+        stage = new lib.Stage(canvas);
+        stage.enableMouseOver();
+        createjs.Touch.enable(stage);
+
+        urlData.language =
+          urlData.language !== "english"
+            ? JSON.parse(queue.getResult("language"))
+            : null;
+        urlData.logo = queue.getResult("logo");
+        urlData.sounds = queue.getResult("sounds").sounds;
+
+        if (AdobeAn0) {
+          var comp0 = AdobeAn0.getComposition(
+            "0FE374AEF6761E4CBF0E4792A1297DA6"
+          );
+          var lib0 = comp0.getLibrary();
+          urlData.premium0 = new lib0.Premium0();
+        }
+
+        if (AdobeAn1000) {
+          var comp1000 = AdobeAn1000.getComposition(
+            "7B005B36460FE74F8BF7410B8A8405A3"
+          );
+
+          var lib1000 = comp1000.getLibrary();
+          urlData.premium1000 = new lib1000.Premium1000();
+        }
+
+        fnStartAnimation = function () {
+          stage.addChild(exportRoot);
+          createjs.Ticker.framerate = lib.properties.fps;
+          createjs.Ticker.addEventListener("tick", stage);
+        };
+
+        AdobeAn.makeResponsive(true, "both", true, 1, [
+          canvas,
+          anim_container,
+          dom_overlay_container,
+        ]);
+        AdobeAn.compositionLoaded(lib.properties.id);
+        fnStartAnimation();
+
+        setTimeout(function () {
+          //$("#loader").hide();
+          Main(urlData);
+        }, 300);
+      }
+    </script>
+  </head>
+  <body onload="init();" style="margin: 0">
+    <div
+      id="animation_container"
+      style="
+        background-color: rgba(255, 255, 255, 1);
+        width: 942px;
+        height: 530px;
+      "
+    >
+      <canvas
+        id="canvas"
+        width="942"
+        height="530"
+        style="
+          position: absolute;
+          display: none;
+          background-color: rgb(255, 255, 255);
+        "
+      ></canvas>
+      <div
+        id="dom_overlay_container"
+        style="
+          pointer-events: none;
+          overflow: hidden;
+          width: 942px;
+          height: 530px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          display: block;
+        "
+      ></div>
+    </div>
+    <div id="loader">Loading...</div>
+
+    <style>
+      canvas {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  </body>
+</html>
