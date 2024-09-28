@@ -87,7 +87,7 @@ function Main(fromURL) {
     normalHeight: 194,
   };
   var charMaxWidth = 42;
-
+  
   var titleInput = $("#titleInput").val();
   var titleInput1 = $("#titleInput1").val();
   var titleInput2 = $("#titleInput2").val();

@@ -232,9 +232,9 @@ function Settings(props) {
   _this.hide = function () {
     menuInstance.visible = false;
     timerInstance.visible = true;
-    $("#titleInput").hide();
-    $("#titleInput1").hide();
-    $("#titleInput2").hide();
+    // $("#titleInput").hide();
+    // $("#titleInput1").hide();
+    // $("#titleInput2").hide();
     $("#selectDrop").hide();
     $("#namesList").hide();
     $("#countInput").hide();
@@ -482,6 +482,9 @@ function Settings(props) {
         }
       }
       eventData = {
+        inputValue: inputValue,
+        inputValue1: inputValue1,
+        inputValue2: inputValue2,
         timerMilliseconds: timeMilliseconds,
         list: currentList,
         display: comboSelectOptions.display,
