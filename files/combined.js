@@ -8594,7 +8594,7 @@ function OSloadApp() {
       quality = "";
     }
     if (OSapp.desktop && window.devicePixelRatio > 1) {
-      quality = "&c=2";
+      quality = "";
     }
     if (window.console) {
       //console.log("App Quality: " + quality);
